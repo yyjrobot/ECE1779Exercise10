@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+
+    <style>
+        table {
+           border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr><th>Title</th><th>Year</th><th>Rating</th></tr>
+        {% for movie in movies %}
+
+        <tr>
+            <td>
+                {{ movie['title'] }}
+            </td>
+            <td>
+                {{ movie['year'] }}
+            </td>
+            <td>
+                {{ movie['rating'] }}
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+
+</body>
+</html>

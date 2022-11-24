@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <title>ECE1779 Flask Examples</title>
+</head>
+<html>
+    <body>
+
+        
+        <div>
+            <h1>Tutorial</h1>
+            <ul>
+            <li><a href="{{ url_for('tutorial_create_table')}}">Create Table</a></li>
+
+            <li><a href="{{ url_for('tutorial_delete_table')}}">Delete Table</a></li>
+        </ul>
+
+        <ul>
+            <li><a href="{{ url_for('tutorial_load_data')}}">Load Data</a></li>
+        </ul>
+
+        <ul>
+            <li><a href="{{ url_for('tutorial_list_all',indexName='CreateDateIndex')}}">List All (CreateDateIndex)</a></li>
+            <li><a href="{{ url_for('tutorial_list_all',indexName='DueDateIndex')}}">List All (DueDateIndex)</a></li>
+            <li><a href="{{ url_for('tutorial_list_all',indexName='TitleIndex')}}">List All (TitleIndex)</a></li>
+        </ul>
+
+        <ul>
+            <li>
+                <form action="{{ url_for('tutorial_query_createdate')}}">
+                    Issues created on <input type="text" name="date" placeholder="yyyy-mm-dd"/> 
+                    Id starts with <input type="text" name="issue_id" /> 
+                        <input type="submit" />
+                </form>
+            </li>
+            <li>
+                <form action="{{ url_for('tutorial_query_title')}}">
+                    Issues with title <input type="text" name="title" /> <input type="submit" />
+                </form>
+            </li>
+<!--            <li>-->
+<!--                <form action="{{ url_for('tutorial_query_duedate')}}">-->
+<!--                    Issues with due date <input type="text" name="duedate" placeholder="yyyy-mm-dd"/> <input type="submit" />-->
+<!--                </form>-->
+<!--            </li>-->
+
+        </ul>
+            
+        </div>
+
+    <body>    
+</html>
